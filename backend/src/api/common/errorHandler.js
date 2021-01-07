@@ -11,6 +11,6 @@ const bundle = res.locals.bundle
 }
 const parseErrors = (nodeRestfulErrors) => {
 const errors = []
-_.forIn(nodeRestfulErrors, error => errors.push(error.message))
+_.forEach(nodeRestfulErrors, error => errors.push(error.message))
 return errors
 }
