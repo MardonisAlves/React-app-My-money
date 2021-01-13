@@ -7,7 +7,7 @@ import If from '../operator/if'
 class TabContent extends Component {
     render() {
         const selected = this.props.tab.selected === this.props.id
-        const visible = this.props.tab.visible[this.props.target]
+        const visible = this.props.tab.visible[this.props.id]
         return (
             <If test={visible}>
                 <div id={this.props.id}

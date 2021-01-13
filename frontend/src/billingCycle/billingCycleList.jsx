@@ -7,7 +7,7 @@ class BillingCycleList extends Component {
 
     componentWillMount() {
         this.props.getList()
-        console.log('Eu fui Compilado')
+
         }
 
         
@@ -23,7 +23,7 @@ class BillingCycleList extends Component {
             }    
     
     render(){
-        console.log(this.props.list)
+        
         return (
             <div>
                 <table className='table'>
@@ -34,8 +34,11 @@ class BillingCycleList extends Component {
                         <th>Ano</th>
                     </tr>
                 </thead>
-                {this.renderRows()}
+               
                 <tbody>
+
+                {this.renderRows()}
+               
                 </tbody>
                 </table>
             </div>  
@@ -44,4 +47,5 @@ class BillingCycleList extends Component {
 }
 const mapStateToProps = state => ({list: state.billingCycle.list})
 const mapDispatchToProps = dispatch => bindActionCreators({getList}, dispatch)
+
 export default connect(mapStateToProps, mapDispatchToProps)(BillingCycleList)

@@ -11,7 +11,7 @@ import TabHeader from '../common/tab/tabHeader'
 import TabContent from '../common/tab/tabContent'
 import { selectTab  , showTabs} from '../common/tab/tabActions'
 import List from  './billingCycleList'
-
+import Form from '../billingCycle/billingCycleForm'
 
 class BillingCycle extends Component {
 
@@ -19,6 +19,8 @@ class BillingCycle extends Component {
     componentWillMount() {
         this.props.selectTab('tabList')
         this.props.showTabs('tabList', 'tabCreate')
+        
+       
         }
 
     render() {
@@ -35,11 +37,13 @@ class BillingCycle extends Component {
 
                         </TabsHeader>
                         <TabsContent>
-
                         <TabContent id='tabList'>
                             <List />
                         </TabContent>
-                        <TabContent id='tabCreate'><h1>Incluir</h1></TabContent>
+                        <TabContent id='tabCreate'>
+                            <Form />
+                        </TabContent>
+
                         <TabContent id='tabUpdate'><h1>Alterar</h1></TabContent>
                         <TabContent id='tabDelete'><h1>Excluir</h1></TabContent>
                         </TabsContent>

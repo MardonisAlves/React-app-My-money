@@ -1,6 +1,7 @@
-const INITIAL_STATE =  {list: []}
+const INITIAL_STATE =  {list: ['ola']}
 
 export default (state = INITIAL_STATE , action) => {
+
     switch(action.type){
         
         case 'BILLING_CYCLES_FETCHED':
