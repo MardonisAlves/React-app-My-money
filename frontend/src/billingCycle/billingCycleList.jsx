@@ -13,13 +13,13 @@ class BillingCycleList extends Component {
         
         renderRows() {
             const list = this.props.list || []
-            return list.map(bc => (
-                <tr key={bc._id}>
-                <td>{bc.name}</td>
-                <td>{bc.month}</td>
-                <td>{bc.year}</td>
+            return list.map((todoList  , index)=> 
+                <tr key={index}>
+                <td>{todoList.name}</td>
+                <td>{todoList.month}</td>
+                <td>{todoList.year}</td>
                 </tr>
-            ))
+            )
             }    
     
     render(){
