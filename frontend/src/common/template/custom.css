@@ -5,7 +5,17 @@ width:100%;
 }
 
 button {
-    margin-left: 5px;
+    margin-left: 2px;
+}
+.buttonactions {
+    height: 20%;
+   
+
+}
+
+.buttonactions i{
+    align-items: center;
+    text-align: center;
 }
 
 .table-action {
