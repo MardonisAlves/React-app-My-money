@@ -18,7 +18,7 @@ function submit(values, url) {
             .then(resp => {
                 dispatch([
                     { type: 'USER_FETCHED', payload: resp.data }
-                ])
+                ])  
             })
             .catch(e => {
                 e.response.data.errors.forEach(
